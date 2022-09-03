@@ -1,9 +1,11 @@
 ## Load packages
-library(dplyr)
-library(tidyr)
-library(readr)
-library(ggplot2)
-library(usmap)
+library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
+library(readr, quietly = TRUE)
+library(ggplot2, quietly = TRUE)
+library(usmap, quietly = TRUE)
+## Eliminate some "informative" messages
+options(readr.show_col_types = FALSE)
+options(dplyr.summarise.inform = FALSE)
 ## Read in data (available at https://doi.org/10.7910/DVN/42MVDX)
 dat = read_csv("1976-2020-president.csv")
 ## Get two-party voteshare by state-year
